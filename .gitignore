@@ -1,1 +1,3 @@
 /unused
+node modules/
+config.env/
