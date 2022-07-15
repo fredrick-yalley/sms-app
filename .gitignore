@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-/unused
 node_modules/
-*.env
-=======
-/unused
-node_modules/
-*.env
->>>>>>> 138ef3323f71641b7caae2e92844cb4e6f3979e9
+/*.env
+
