@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+      background-image: url('/img/touch.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-family: Arima;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    background-color: #fff;
+    opacity: 0.9;
+    margin-block: 5rem;
+    border-radius: 25px;
+}
+
+.wrapper h1 {
+    margin-top: 2rem;
+    color: lightskyblue;
+}
+
+
+.wrapper p {
+    text-align: center;
+    margin-block: 6rem;
+}
+
+#home-btn {
+    padding: 1.5rem;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 50px;
+    font-family: Arima;
+    /* margin-top: 6rem; */
+    margin-bottom: 6rem;
+    transition: all 0.5s ease-out;
+}
+
+#home-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
