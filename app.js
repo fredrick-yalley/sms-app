@@ -6,8 +6,6 @@ const templateRouter = require('./routes/templateRoute');
 const compression = require("compression");
 const app = express();
 
-var util= require('util');
-var encoder = new util.TextEncoder('utf-8');
 
 app.use(express.json());
 app.use(express.urlencoded());
