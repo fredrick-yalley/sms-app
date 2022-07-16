@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 const sendBtn = document.getElementById("send");
 const editBtn = document.getElementById("edit");
 const toField = document.getElementById("phone");
@@ -9,6 +10,7 @@ const form = document.querySelector(".card");
 sendBtn.addEventListener("click", () => {
     const charlength = toField.value.length;
     const messageChar = messageField.value
+    console.log(charlength);
     if(charlength === 13 && messageChar) {
        alert("MESSAGE SENT!");
     }else if (charlength === 27 && messageChar) {
