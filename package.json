@@ -1,5 +1,5 @@
 {
-  "name": "sms-sender",
+    "name": "sms-sender",
   "version": "1.0.0",
   "description": "Portfolio project",
   "main": "app.js",
@@ -29,3 +29,4 @@
     "npm": "8.0.0"
   }
 }
+
