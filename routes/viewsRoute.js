@@ -3,8 +3,8 @@ const router = express.Router();
 const viewsController = require('../Controllers/viewsController');
 const smsController = require('./../Controllers/smsController');
 
-router.get('/', viewsController.getHome);
-router.get('/index', viewsController.getIndex);
+router.get('/', viewsController.getIndex);
+router.get('/compose', viewsController.getCompose);
 router.get('/records', viewsController.getRecords);
 router.get('/contacts', viewsController.getContact);
 router.get('/template', viewsController.getTemplate);

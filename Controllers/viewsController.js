@@ -2,9 +2,9 @@ const Message = require('../Model/messageModel');
 const Template = require('../Model/templateModel');
 
 
-exports.getIndex = async (req, res) => {
+exports.getCompose = async (req, res) => {
 
-    res.status(200).render('index');
+    res.status(200).render('compose');
 }
 
 exports.getRecords = async (req, res) => {
@@ -14,9 +14,9 @@ exports.getRecords = async (req, res) => {
     });
 }
 
-exports.getHome = async (req, res) => {
+exports.getIndex = async (req, res) => {
 
-    res.status(200).render('home');
+    res.status(200).render('index');
 }
 
 exports.getContact = async (req, res) => {

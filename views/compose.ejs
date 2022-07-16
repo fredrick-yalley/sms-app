@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrap-1 at">
+        <img src="/img/sent.jpg" alt="sent-logo">
+        <h1>Message Sent!</h1>
+    </div>
+    <header class="header">
+        <div class="head">
+            <img src="/img//logo2.png" alt="logo" id="logo">
+            <h1>SMS Sender</h1>
+        </div>
+        <ul class="links">
+            <li><a href="/records">Histories</a></li>
+            <li><a href="/template">Template</a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="row my-5">
+            <div class="col"></div>
+
+            <div class="col-lg-6 col-md-6">
+                <form action="/api/v1/messages" method="post" class="shadow p-5" id="card">
+                    <div class="">
+                        <h1>SEND MESSAGE</h1>
+                        <label for="to" class="form-label">Send message to:</label>
+                        <input type="tel" name="to" class="form-control-lg mb-3 w-100" id="phone"
+                            placeholder="Enter phone number in international format" max="13" min="13">
+                            
+                    </div>
+                    <div class="form-group">
+                        <label id="message-lb" class="form-label mb-3" for="message">Message</label>
+                        <textarea name="message" class="form-control mb-3" id="message" rows="3"></textarea>
+
+                        <div>
+                            <select name="from" class="form-control-sm mb-4 w-40" id="selectSender">
+                                <option>Ronald</option>
+                                <option>Secretary</option>
+                            </select>
+                        </div>
+
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button class=" btn btn-primary rounded-pill mx-1 d-sm-block" id="edit">
+                                Edit
+                            </button>
+                            <button type="submit" class="btn btn-primary mx-1 rounded-pill d-sm-block"
+                                id="send">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col"></div>
+        </div>
+
+        <script src="/js/index.js"></script>
+</body>
+
+</html>
