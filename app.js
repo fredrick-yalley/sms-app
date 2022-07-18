@@ -4,6 +4,7 @@ const messageRouter = require('./routes/messageRoute');
 const viewRouter = require('./routes/viewsRoute');
 const templateRouter = require('./routes/templateRoute');
 const compression = require("compression");
+const helmet= require("helmet");
 const app = express();
 
 
@@ -17,6 +18,7 @@ app.use('js', express.static(__dirname + 'public/js'));
 app.use('img', express.static(__dirname + 'public/img'));
 
 app.use(compression());
+app.use(helmet());
 
 // set views 
 app.set('views', path.join(__dirname, 'views'));
