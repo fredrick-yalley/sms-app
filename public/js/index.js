@@ -6,7 +6,8 @@ const sentInfo = document.querySelector(".at");
 const form = document.querySelector(".card");
 
 
-sendBtn.addEventListener("click", () => {
+sendBtn.addEventListener("click", (e) => {
+    e.preventDefault();
     const charlength = toField.value.length;
     const messageChar = messageField.value
     if(charlength === 13 && messageChar) {
