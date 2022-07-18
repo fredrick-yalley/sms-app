@@ -4,8 +4,6 @@ const dotenv = require('dotenv');
 dotenv.config({ path: './config.env'});
 
 const app = require('./app');
-const { clearConfigCache } = require('prettier');
-
 
 
 const DBLocal = process.env.DATABASE_LOCAL;
