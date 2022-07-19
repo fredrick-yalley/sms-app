@@ -38,18 +38,21 @@ body {
   width: 100%;
   /* opacity: 0.9; */
   border: none;
+  /* border: 1px solid red; */
 }
 
 .header h1 {
   text-align: center;
   color: #fff;
   margin-block: 0.4rem;
+  /* margin-left: 2rem; */
+  /* border: 1px solid red; */
 }
 
 .head {
   display: flex;
-  justify-content: space-between;
-  width: 20%;
+  justify-content: center;
+  width: 30%;
   margin-block: 0.7rem;
 }
 
@@ -61,13 +64,21 @@ body {
 }
 
 .links {
-  list-style: none;
+  
   border-bottom: none;
-  display: flex;
-  justify-content: space-between;
-  width: 15%;
   font-size: 1.2rem;
   padding-right: 2rem;
+  /* border: 1px solid red; */
+  margin-bottom: 1rem;
+}
+ul {
+  display: inline-flex;
+  /* border: 1px solid red; */
+}
+li {
+  width: 50%;
+  padding-right: 1.2rem;
+  list-style: none;
 }
 
 a {
@@ -142,9 +153,7 @@ td.button-td {
   opacity: 0.9;
 }
 
-#phone {
-  padding-right: 14rem;
-}
+
 
 #message-lb {
   margin-top: 1.5rem;
@@ -200,10 +209,95 @@ button:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
+.links .fa {
+  display: none;
+}
+ul.active {
+  display: block;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 4;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.87) 30%, transparent);
+  height: 100vh;
+}
+ul.active a {
+  color: #333D4B;
+  font-weight: bolder;
+  font-size: 2rem;
+  margin-left: 5rem;
+}
 
-@media screen and(max-width: 700px) {
-    .header {
-      margin-top: 4rem;
+@media screen and (max-width: 820px) {
+    .head {
+      width: 25%
     }
+    .head h1 {
+      font-size: 1.2rem;
+      padding-block: 0.4rem;
+    }
+    .links {
+      width: 30%;
+      margin-block: 0.4rem;
+      /* border: 1px solid red; */
+    }
+    .links li {
+      padding-right: 0.8rem;
+    }
+    .container {
+      margin-block-end: 22em;
+      margin-block-start: 8rem;
+    }
+    #table-container {
+      max-width: 95vw;
+      padding-inline: 2rem;
+    }
+   
+    table tr td {    
+      font-size: 1rem;
+    }
+    
+
+}
+
+@media screen and (max-width: 500px) {
+    nav ul {
+    display: none;
+    }
+    .links .fa {
+    display: block;
+    font-size: 25px;
+    margin-left: 7rem;
+    } 
+    .head {
+      width: 47%;
+    }
+    .head h1 {
+      font-size: 1.2rem;
+      padding-block: 0.4rem;
+    }
+    .links {
+
+      width: 43%;
+      margin-block: 1rem;
+      /* margin-right: 1rem; */
+    }
+  
+    .container {
+      margin-block-end: 6rem;
+      margin-block-start: 2rem;
+    }
+
+    #table-container {
+      max-width: 97vw;
+      padding-inline: 0.5rem;
+    }
+   
+    table tr td {    
+      font-size: 1rem;
+    }
+  
 }
 

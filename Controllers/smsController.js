@@ -2,6 +2,7 @@ const Message = require('./../Model/messageModel');
 const {SendMessage} = require('../helpers/SMS');
 
 
+
 exports.SendText = async(req, res, next) => {
     let body = req.body
     numberArray = body.to
@@ -24,16 +25,16 @@ exports.SendText = async(req, res, next) => {
                     } catch (e) {
                         return res
                         .status(400)
-                        .redirect(req.headers.referer);
+                        .redirect(req.body.ref);
                     }
                 })
             } catch (e) {
-                return res.status(400).redirect(req.headers.referer)
-            }
-            
+                return res.status(400).redirect(req.body.ref);
+            }  
         }
 
-        return res.status(200).redirect(req.headers.referer)
+        return res.status(200).redirect(req.body.ref);
+
     }else{
         details = {
             message: body.message,
@@ -43,24 +44,23 @@ exports.SendText = async(req, res, next) => {
         try{
             SendMessage(details.from, details.to, details.message)
             await Message.create(details).then(message => {
-                res.status(200).redirect(req.headers.referer)
+                res.status(200).redirect(req.body.ref);
             }).catch(error => {
                 try{
                     return res
                         .status(400)
-                        .redirect(req.headers.referer);
+                        .redirect(req.body.ref);
+
                 } catch (e) {
                     return res
                     .status(400)
-                    .redirect(req.headers.referer);
+                    .redirect(req.body.ref);
                 }
             })
         } catch (e) {
             return res
                     .status(400)
-                    .redirect(req.headers.referer);
-                    
-
+                    .redirect(req.body.ref);
         }
     }
     
@@ -75,18 +75,18 @@ exports.viewMessage = async(req, res, next) => {
                 message
             });
         }else{
-            return res.status(400).redirect(req.headers.referer);
+            return res.status(400).redirect(req.body.ref);
 
         }
     }).catch(error => {
             try{
                 return res
                     .status(400)
-                    .redirect(req.headers.referer);
+                    .redirect(req.body.ref);
             } catch (e) {
                 return res
                 .status(400)
-                .redirect(req.headers.referer);
+                .redirect(req.body.ref);
             }
         })
 
@@ -107,36 +107,36 @@ exports.ResendMessage = async(req, res, next) => {
             try{
                 SendMessage(details.from, details.to, details.message)
                 await Message.create(details).then(message => {
-                    res.status(200).redirect(req.headers.referer)
+                    res.status(200).redirect(req.body.ref)
                 }).catch(error => {
                     try{
                         return res
                             .status(400)
-                            .redirect(req.headers.referer);
+                            .redirect(req.body.ref);
                     } catch (e) {
                         return res
                         .status(400)
-                        .redirect(req.headers.referer);
+                        .redirect(req.body.ref);
                     }
                 })
             } catch (e) {
                 return res
                         .status(400)
-                        .redirect(req.headers.referer);
+                        .redirect(req.body.ref);
             }
         }else{
-            res.status(400).redirect(req.headers.referer);
+            res.status(400).redirect(req.body.ref);
 
         }
     }).catch(error => {
             try{
                 return res
                     .status(400)
-                    .redirect(req.headers.referer);
+                    .redirect(req.body.ref);
             } catch (e) {
                 return res
                 .status(400)
-                .redirect(req.headers.referer);
+                .redirect(req.body.ref);
             }
         })
 }
