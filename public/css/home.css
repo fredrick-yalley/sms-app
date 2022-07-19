@@ -30,6 +30,7 @@ body {
 }
 
 .wrapper h1 {
+    text-align: center;
     margin-top: 2rem;
     color: lightskyblue;
 }
@@ -46,7 +47,8 @@ body {
     border: none;
     border-radius: 50px;
     font-family: Arima;
-    /* margin-top: 6rem; */
+    font-size: 1.5rem;
+    font-style: italic;
     margin-bottom: 6rem;
     transition: all 0.5s ease-out;
 }
@@ -54,4 +56,20 @@ body {
 #home-btn:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+@media screen and (max-width: 820px) {
+    .wrapper {
+        width: 60%;
+        margin-block: 15rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .wrapper {
+        width: 80%;
+        margin-block: 15rem;
+    }
+    #home-btn {
+        font-size: 1.2rem;
+    }
 }
