@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EditMessage</title>
+    <title>Sms Sender</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap');
 
@@ -44,12 +45,16 @@
         .header h1 {
             text-align: center;
             color: #fff;
+            margin-inline: 0.8rem;
+
         }
 
         .head {
             display: flex;
-            justify-content: space-between;
-            width: 20%;
+            justify-content: center;
+            width: 30%;
+            margin-block: 0.7rem;
+
         }
 
         #logo {
@@ -59,12 +64,10 @@
         }
 
         .links {
-            list-style: none;
             border-bottom: none;
-            display: flex;
-            justify-content: space-between;
-            width: 20%;
             font-size: 1.2rem;
+            /* border: 1px solid red; */
+            margin-bottom: 1rem;
         }
 
         a {
@@ -121,17 +124,11 @@
             border: 1px solid #ccc;
         }
 
-        table tr td {
-            margin: unset;
-            max-width: 20px !important;
-        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
-        td.button-td {
-            padding: 2px;
-        }
-
-        .btn-primary {
-            padding-inline: 32px;
         }
 
         #card {
@@ -139,40 +136,8 @@
             opacity: 0.9;
         }
 
-        #phone {
-            /* width: 100% !important; */
-            padding-right: 14rem;
-        }
-
         #message-lb {
             margin-top: 1.5rem;
-        }
-
-
-
-        .wrap-1 {
-            display: none;
-        }
-
-        .wrap {
-            background-color: skyblue;
-            position: absolute;
-            top: 10rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-inline: 8rem;
-            padding-block: 6rem;
-            border-radius: 25px;
-            transition: all 60s;
-            z-index: 5;
-        }
-
-        .wrap h1 {
-            color: #fff;
-            text-align: center;
-            margin-left: -1rem;
-            margin-block-start: 1rem;
         }
 
         button {
@@ -184,24 +149,129 @@
             cursor: pointer;
             transform: scale(1.1);
         }
+
+        .links .fa {
+            display: none;
+        }
+
+        ul {
+            display: inline-flex;
+            margin-left: -6em;
+        }
+
+        li {
+            width: 50%;
+            padding-right: 1.2rem;
+            list-style: none;
+        }
+
+        ul.active {
+            display: block;
+            position: absolute;
+            top: 10vh;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            line-height: 4;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.87) 30%, transparent);
+            height: 100vh;
+        }
+
+        ul.active a {
+            color: #333D4B;
+            font-weight: bolder;
+            font-size: 2rem;
+            margin-left: 10rem;
+        }
+
+        @media screen and (max-width: 820px) {
+            .head {
+                width: 25%
+            }
+
+            .head h1 {
+                font-size: 1.2rem;
+                padding-block: 0.4rem;
+            }
+
+            .links {
+                width: 30%;
+                margin-block: 0.4rem;
+                /* border: 1px solid red; */
+            }
+
+            .links li {
+                padding-right: 0.8rem;
+            }
+
+            .container {
+                margin-block-end: 22em;
+                margin-block-start: 8rem;
+            }
+
+            #table-container {
+                max-width: 95vw;
+                padding-inline: 2rem;
+            }
+
+            table tr td {
+                font-size: 1rem;
+            }
+
+        }
+
+        @media screen and (max-width: 500px) {
+            nav ul {
+                display: none;
+            }
+
+            .links .fa {
+                display: block;
+                font-size: 25px;
+                margin-left: 5rem;
+            }
+
+            .head {
+                width: 47%;
+            }
+
+            .head h1 {
+                font-size: 1.1rem;
+                padding-block: 0.4rem;
+            }
+
+            .links {
+
+                width: 30%;
+                margin-block: 1rem;
+                /* margin-right: 1rem; */
+            }
+
+            .container {
+                margin-block-end: 6rem;
+                margin-block-start: 2rem;
+            }
+
+
+
+        }
     </style>
 </head>
 
 <body>
-    <div class="wrap-1 at">
-        <img src="/img/sent.jpg" alt="sent-logo">
-        <h1>Message Sent!</h1>
-    </div>
     <header class="header">
         <div class="head">
             <img src="/img//logo2.png" alt="logo" id="logo">
             <h1>SMS Sender</h1>
         </div>
-        <ul class="links">
-            <li><a href="/compose">Compose</a></li>
-            <li><a href="/records">Histories</a></li>
-            <li><a href="/template">Template</a></li>
-        </ul>
+        <nav class="links">
+            <i class="fa fa-bars"></i>
+            <ul>
+                <li><a href="/compose">Compose</a></li>
+                <li><a href="/records">Histories</a></li>
+                <li><a href="/template">Template</a></li>
+            </ul>
+        </nav>
     </header>
     <div class="container">
         <div class="row my-5">
@@ -213,12 +283,13 @@
                         <h1>SEND MESSAGE</h1>
                         <label for="to" class="form-label">Send message to:</label>
                         <input type="tel" name="to" class="form-control-lg mb-3 w-100" id="phone"
-                            placeholder="Enter phone number in international format" value="<%= message.to %>">
+                            placeholder="Enter phone number in international format" value="<%= message.to %>" pattern="\+[0-9]{12}" required>
+                            <input type="hidden" name="ref" id="" value="/compose">
                     </div>
                     <div class="form-group">
                         <label id="message-lb" class="form-label mb-3" for="message">Message</label>
                         <textarea name="message" class="form-control mb-3" id="message"
-                            rows="3"><%= message.message %></textarea>
+                            rows="3" required><%= message.message %></textarea>
 
                         <div>
                             <select name="from" class="form-control-sm mb-4 w-40" id="selectSender"
@@ -233,7 +304,8 @@
                             <button class=" btn btn-primary rounded-pill mx-1 d-sm-block" id="edit">
                                 Edit
                             </button>
-                            <button type="submit" class="btn btn-primary mx-1 rounded-pill d-sm-block" id="send">Send</button>
+                            <button type="submit" class="btn btn-primary mx-1 rounded-pill d-sm-block"
+                                id="send">Send</button>
                         </div>
                     </div>
                 </form>

@@ -25,7 +25,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 
-
 app.use('/', viewRouter);
 app.use('/api/v1/messages', messageRouter);
 app.use('/api/v1/templates', templateRouter)
