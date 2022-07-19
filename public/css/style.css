@@ -143,15 +143,12 @@ td.button-td {
 }
 
 #phone {
-  /* width: 100% !important; */
   padding-right: 14rem;
 }
 
 #message-lb {
   margin-top: 1.5rem;
 }
-
-
 
 .wrap-1 {
   display: none;
@@ -203,4 +200,10 @@ button:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
-/*# sourceMappingURL=style.css.map */
+
+@media screen and(max-width: 700px) {
+    .header {
+      margin-top: 4rem;
+    }
+}
+
