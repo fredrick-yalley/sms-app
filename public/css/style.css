@@ -178,27 +178,6 @@ img {
   margin-block: 1.3rem;
 }
 
-.wrap {
-  background-color: skyblue;
-  position: absolute;
-  top: 10rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-inline: 8rem;
-  padding-block: 6rem;
-  border-radius: 25px;
-  transition: all 60s;
-  z-index: 5;
-  font-size: 3rem;
-}
-
-.wrap h1 {
-  color: #fff;
-  text-align: center;
-  margin-left: -1rem;
-  margin-block-start: 1rem;
-}
 
 button {
   transition: all 0.5s ease-out;
@@ -215,11 +194,11 @@ button:hover {
 ul.active {
   display: block;
   position: absolute;
-  top: 10vh;
+  top: 8vh;
   left: 0;
   width: 100%;
   text-align: center;
-  line-height: 4;
+  line-height: 2;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.87) 30%, transparent);
   height: 100vh;
 }
