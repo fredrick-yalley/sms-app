@@ -15,12 +15,23 @@ Functionalities
 * The history page has all SMS sent to client with an edit and resend button to either edit already sent message to be resent or to resend message directly from the history page.
 * The Africastalking platform is the platform that is used in sending SMS.
 
+Usage Requirements
+- The receipient's number should be given in **International format**.
+- The app is designed to send SMS to **only** Ghana mobile networks.
+- When sending to multiple clients, the mobile numbers has to be seperated by a **single space**.
+- Users cannot send SMS if receipient number is not given in the correct format or its empty.
+- The sender has been restricted to either Ronald or Secretary and users must choose any of them as the sender of the message. 
+
 
 **Built with**
-- Node 
+- Node
+- Express 
 - Ejs
 - Vanilla JavaScript
 - CSS custom properties
+- MongoDB Atlas
+- mongoose
+- heroku
 
  **Author**
 - Fredrick Yalley (https://github.com/fredrick-yalley- @fredrick-yalley)
